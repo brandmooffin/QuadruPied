@@ -48,23 +48,12 @@ leg_formation = 0
 
 channel_cur = [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]
 
-leg1_s = 37
-leg2_s = 35
-leg3_s = 33
-leg4_s = 31
-start_s = 38
-stop_s = 36
-
 
 def main():
-    pinsetup()
     begin()
     time.sleep(1)
 
-    turn_right()
-    turn_right()
-    turn_right()
-    turn_right()
+    #turn_right()
 
     # for x in range(0,5):
     #     forward()
@@ -73,24 +62,8 @@ def main():
     #     turn_left()
 
 
-def pinsetup():
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(leg1_s, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(leg2_s, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(leg3_s, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(leg4_s, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-
 def begin():
     global leg_formation
-    # Move Left Side
-    leg1(89, 89, 89)  # leftside
-    leg2(89, 89, 89)
-
-    leg3(89, 89, 89)  # rightside
-    leg4(89, 89, 89)
-
-    time.sleep(2)
 
     leg1(front_parallel, footdown, pincer_down)  # leftside
     leg2(back_parallel, footdown, pincer_down)
