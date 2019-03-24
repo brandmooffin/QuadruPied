@@ -1,2 +1,2 @@
 # QuadruPied
-Python script for quadruped robot powered by Raspberry Pi - QuadruPied - HacksterMIA Workshop
+Python script for quadruped robot powered by Raspberry Pi - QuadruPied - GDG Miami & HacksterMIA Workshop
